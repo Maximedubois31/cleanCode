@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
-
 import fr.afg.iteration1.entity.CommandLine;
 import fr.afg.iteration1.entity.Filtre;
 import fr.afg.iteration1.entity.PurchaseOrder;

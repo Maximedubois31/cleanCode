@@ -110,7 +110,7 @@ public class InitDataSet {
         CommandLine commandLine3 = new CommandLine();
         commandLine3.setDesiredQuantity(33f);
         commandLine3.setProduct(product3);
-		commandLine3.setActivePrice(40f);
+        commandLine3.setActivePrice(40f);
 
         CommandLine commandLine4 = new CommandLine();
         commandLine4.setDesiredQuantity(44f);

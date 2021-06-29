@@ -7,7 +7,9 @@ import lombok.Setter;
 import javax.persistence.*;
 import java.util.List;
 
-@Getter @Setter @NoArgsConstructor
+@Getter
+@Setter
+@NoArgsConstructor
 
 @Entity
 @Table(name = "product_type")

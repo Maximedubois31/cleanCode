@@ -10,14 +10,14 @@ import fr.afg.iteration1.service.UserService;
 @Controller
 public class UserController {
 
-	@Autowired
-	private UserService userService;
-	
-	@GetMapping("/users")
-	public String listUsers(Model model) {
-		model.addAttribute("users", userService.getAllUsers());
-		return "users";
-	}
+    @Autowired
+    private UserService userService;
+
+    @GetMapping("/users")
+    public String listUsers(Model model) {
+        model.addAttribute("users", userService.getAllUsers());
+        return "users";
+    }
 
 
 }

@@ -8,7 +8,9 @@ import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.List;
 
-@Getter @Setter @NoArgsConstructor
+@Getter
+@Setter
+@NoArgsConstructor
 
 @Entity
 @Table(name = "vat_type")
