@@ -58,17 +58,6 @@ public class Product {
     @JoinColumn(referencedColumnName = "id")
     private Company supplier;
 
-    public Product(String name, String ref, String brand, String imageUrl, String origin, String quantityUnity, String description, ProductType productType) {
-        this.name = name;
-        this.ref = ref;
-        this.brand = brand;
-        this.imageUrl = imageUrl;
-        this.origin = origin;
-        this.quantityUnity = quantityUnity;
-        this.description = description;
-        this.productType = productType;
-    }
-
     public Product(String name) {
         this.name = name;
     }

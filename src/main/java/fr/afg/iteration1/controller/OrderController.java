@@ -165,7 +165,7 @@ public class OrderController {
             Cell cellActivePrice = rowHeader.createCell(++cellCount);
             cellActivePrice.setCellValue("Prix unité");
 
-            float HT = 0;
+            float ht = 0;
 
             //Body cell
             for (CommandLine line : order.getLines()) {
@@ -179,14 +179,14 @@ public class OrderController {
                 cell3.setCellValue(line.getProduct().getMoq() + " " + line.getProduct().getQuantityUnity());
                 Cell cell4 = rowByProduct.createCell(++cellCount);
                 cell4.setCellValue(line.getActivePrice() + "€ " + line.getProduct().getQuantityUnity());
-                HT += line.getActivePrice();
+                ht += line.getActivePrice();
                 //todo TVA
             }
             Row rowTotal = sheet.createRow(++rowCount);
             Cell cellTotalTitre = rowTotal.createCell(++cellCount);
             cellTotalTitre.setCellValue("Prix HT");
             Cell cellTotal = rowTotal.createCell(++cellCount);
-            cellTotal.setCellValue(HT + "€");
+            cellTotal.setCellValue(ht + "€");
 
             outputStream = new FileOutputStream(excelFilePath);
             autoSizeColumns(workbook);
