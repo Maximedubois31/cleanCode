@@ -128,11 +128,11 @@ public class OrderController {
             try {
                 outputStream = new FileOutputStream(excelFilePath);
                 wb.write(outputStream);
-                wb.close();
-                outputStream.close();
             } catch (IOException e) {
                 e.printStackTrace();
             } finally {
+                wb.close();
+                outputStream.close();
             }
 
             file = new File(excelFilePath);
@@ -194,9 +194,14 @@ public class OrderController {
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
-            inputStream.close();
-            workbook.close();
-            outputStream.close();
+
+            try {
+                inputStream.close();
+                workbook.close();
+                outputStream.close();
+            } catch (NullPointerException e) {
+                e.printStackTrace();
+            }
         }
         return "redirect:orderes";
     }
