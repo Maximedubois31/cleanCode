@@ -30,7 +30,7 @@ public class DashboardController {
 	}
 	
 	@GetMapping("/crudProduct")
-	public String CrudProduct(Model model) {
+	public String crudProduct(Model model) {
 		return null;
 		
 	}

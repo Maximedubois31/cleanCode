@@ -39,7 +39,7 @@ public class InitDataSet {
         Company company2 = new Company();
         company2.setId(3L);
         Company company3 = new Company();
-        company3.setId(3L);
+        company3.setId(4L);
 
         User userTest = new User();
         userTest.setEmail("customer");

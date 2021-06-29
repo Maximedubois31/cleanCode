@@ -15,7 +15,7 @@ import java.util.Set;
 
 @Entity
 @Table
-public class Product implements Serializable{
+public class Product {
 
     /**
 	 * 
