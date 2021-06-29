@@ -2,10 +2,8 @@ package fr.afg.iteration1.controller;
 
 import javax.servlet.http.HttpSession;
 
-import fr.afg.iteration1.entity.Filtre;
 import fr.afg.iteration1.entity.User;
 import fr.afg.iteration1.service.PurchaseOrderService;
-import fr.afg.iteration1.service.Search;
 import fr.afg.iteration1.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

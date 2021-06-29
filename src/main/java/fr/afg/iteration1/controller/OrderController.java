@@ -11,8 +11,6 @@ import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.*;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -131,8 +129,12 @@ public class OrderController {
             } catch (IOException e) {
                 e.printStackTrace();
             } finally {
-                wb.close();
-                outputStream.close();
+                try {
+                    wb.close();
+                    outputStream.close();
+                } catch (NullPointerException e) {
+                    e.printStackTrace();
+                }
             }
 
             file = new File(excelFilePath);
