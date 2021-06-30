@@ -6,7 +6,11 @@ import java.util.stream.Collectors;
 
 import javax.servlet.http.HttpSession;
 
-import fr.afg.iteration1.entity.*;
+import fr.afg.iteration1.entity.CommandLine;
+import fr.afg.iteration1.entity.Filtre;
+import fr.afg.iteration1.entity.Product;
+import fr.afg.iteration1.entity.ProductType;
+import fr.afg.iteration1.entity.PurchaseOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

@@ -36,12 +36,18 @@ public class LoginController {
     PurchaseOrderService purchaseOrderService;
 
 
-    @PreAuthorize("hasRole('CUSTOMER') || hasRole('PREPARATOR') || hasRole('LOGISTIC')")
+    @PreAuthorize("hasRole('CUSTOMER') " +
+                    "|| hasRole('PREPARATOR') " +
+                    "|| hasRole('LOGISTIC')")
     @RequestMapping(value = "/afterlogin")
-    public String doAfterLogin(Model model, @RequestParam(name = "idUser", required = false) Long idUser) {
+    public String doAfterLogin(Model model,
+                               @RequestParam(name = "idUser", required = false) Long idUser) {
         model.addAttribute("products", productService.getAllProduct());
         if (idUser == null) {
-            Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+            Object principal = SecurityContextHolder
+                                .getContext()
+                                .getAuthentication()
+                                .getPrincipal();
             if (principal instanceof UserDetails) {
                 String idString = ((UserDetails) principal).getUsername();
                 idUser = Long.parseLong(idString);

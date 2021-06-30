@@ -27,22 +27,18 @@ public class CompanyServiceImpl implements CompanyService {
     @Autowired
     private AddressDao addressDao;
 
-    @Override
     public List<Company> getAllCompany() {
         return companyDao.findAll();
     }
 
-    @Override
     public Company saveCompany(Company company) {
         return companyDao.save(company);
     }
 
-    @Override
     public AddressType saveAddressType(AddressType addressType) {
         return addressTypeDao.save(addressType);
     }
 
-    @Override
     public Address saveAddress(Address address) {
         return addressDao.save(address);
     }

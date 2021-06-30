@@ -7,7 +7,11 @@ import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.transaction.Transactional;
 
-import fr.afg.iteration1.entity.*;
+import fr.afg.iteration1.entity.CommandLine;
+import fr.afg.iteration1.entity.Company;
+import fr.afg.iteration1.entity.Product;
+import fr.afg.iteration1.entity.PurchaseOrder;
+import fr.afg.iteration1.entity.User;
 import fr.afg.iteration1.service.PurchaseOrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Profile;

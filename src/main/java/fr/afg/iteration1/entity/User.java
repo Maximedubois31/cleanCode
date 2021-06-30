@@ -45,25 +45,5 @@ public class User {
     @OneToMany(mappedBy = "preparator")
     Set<PurchaseOrder> preparatorPurchases;
 
-    public User(String firstName, String lastName) {
-        super();
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
-
-    public User(Long id, String firstName, String lastName) {
-        super();
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
-
-    public User(String firstName, String email, String password, boolean active, String roles) {
-        this.firstName = firstName;
-        this.email = email;
-        this.active = active;
-        this.password = password;
-        this.roles = roles;
-    }
 
 }

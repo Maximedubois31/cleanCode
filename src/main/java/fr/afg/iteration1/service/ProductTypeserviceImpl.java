@@ -20,12 +20,10 @@ public class ProductTypeserviceImpl implements ProductTypeService {
     @Autowired
     ProductTypeService productTypeService;
 
-    @Override
     public List<ProductType> getAllProductType() {
         return productTypeDao.findAll();
     }
 
-    @Override
     public ProductType saveProductType(ProductType productType) {
         return productTypeDao.save(productType);
     }
