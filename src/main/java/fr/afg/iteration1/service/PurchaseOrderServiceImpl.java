@@ -20,6 +20,7 @@ public class PurchaseOrderServiceImpl implements PurchaseOrderService {
     @Autowired
     private CommandLineDao commandLineDao;
 
+    @Override
     public PurchaseOrder savePurchaseOrder(PurchaseOrder purchaseOrder) {
         for (CommandLine line : purchaseOrder.getLines()) {
             commandLineDao.save(line);
@@ -27,21 +28,25 @@ public class PurchaseOrderServiceImpl implements PurchaseOrderService {
         return purchaseOrderDao.save(purchaseOrder);
     }
 
+    @Override
     public PurchaseOrder deleteCommandLine(PurchaseOrder purchaseOrder, CommandLine commandLine) {
         purchaseOrder.getLines().remove(commandLine);
         return purchaseOrder;
     }
 
+    @Override
     public PurchaseOrder addCommandLine(PurchaseOrder purchaseOrder, CommandLine commandLine) {
         purchaseOrder.getLines().add(commandLine);
         commandLine.setPurchaseOrder(purchaseOrder);
         return purchaseOrder;
     }
 
+    @Override
     public List<PurchaseOrder> getAllOrderes() {
         return purchaseOrderDao.findAll();
     }
 
+    @Override
     public PurchaseOrder getPoById(Long id) {
         return purchaseOrderDao.getById(id);
     }

@@ -34,11 +34,6 @@ public class CommandLine {
     @JoinColumn(referencedColumnName = "id")
 	private PurchaseOrder purchaseOrder;
 
-    public CommandLine(Float disiredQuantity, Product product) {
-        this.desiredQuantity = disiredQuantity;
-        this.product = product;
-    }
-
 	@Override
 	public String toString() {
 		return "CommandLine [id=" + id + ", orderedQuantity=" + orderedQuantity + ", desiredQuantity=" + desiredQuantity

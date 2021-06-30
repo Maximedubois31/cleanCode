@@ -39,8 +39,5 @@ public class Company {
     @OneToMany(mappedBy = "company")
     private Set<User> users;
 
-    public Company(String companyName) {
-        this.companyName = companyName;
-    }
 
 }

@@ -69,10 +69,6 @@ public class Product {
     @JoinColumn(referencedColumnName = "id")
     private Company supplier;
 
-    public Product(String name) {
-        this.name = name;
-    }
-
     @Override
     public String toString() {
         return "Product [id=" + id + ", name=" + name + ", ref=" + ref

@@ -18,21 +18,25 @@ public class UserServiceImpl implements UserService {
     private UserDao userDao;
 
 
+    @Override
     public User saveUser(User user) {
         return userDao.save(user);
     }
 
 
+    @Override
     public List<User> getAllUsers() {
         return userDao.findAll();
     }
 
 
+    @Override
     public User getUserById(Long id) {
         return userDao.getById(id);
     }
 
 
+    @Override
     public User getUserByEmail(String email) {
         return userDao.findByEmail(email).get();
     }

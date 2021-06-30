@@ -45,10 +45,6 @@ public class PurchaseOrder {
     @OneToMany(mappedBy = "purchaseOrder")
     private List<CommandLine> lines;
 
-    public PurchaseOrder(LocalDate creationDate) {
-        this.creationDate = creationDate;
-    }
-
     @Override
     public String toString() {
         return "PurchaseOrder [id=" + id + ", creationDate=" + creationDate + ", wantedDeliveryDate="
